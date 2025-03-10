@@ -1,0 +1,7 @@
+h1 {
+  background-image: url("forest.jpg");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
