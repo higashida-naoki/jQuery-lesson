@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パスワードの表示切り替え</title>
+    <script src="https://kit.fontawesome.com/c23dfdc6e4.js" crossorigin="anonymous"></script>
+
+    <style>
+      .password-container {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+      }
+      
+      .password-container input {
+        width: 100%;
+        height: 20px;
+        font-size: 16px;
+        padding: 10px 40px 10px 10px; /* 右側にアイコン用の余白を確保 */
+        border: 1.2px solid #1e272e;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: inset 4px 4px 8px #808e9b, inset -4px -4px 8px #d2dae2;
+      }
+      
+      .password-container .pass-icon {
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 20px;
+        color: #555;
+      }
+    </style>
+</head>
+<body>
+
+  <form action="">
+    <div class="password-container">
+      <input type="password" placeholder="パスワード" id="password">
+      <i class="fa-solid fa-eye pass-icon" id="pass-icon" onclick="togglePassword()"></i>
+    </div>
+  </form>
+
+  <script>
+    function togglePassword() {
+      var passField = document.getElementById("password");
+      var passIcon = document.getElementById("pass-icon");
+
+      // パスワードの表示・非表示を切り替える
+      passField.type = passField.type === "password" ? "text" : "password";
+
+      // アイコンのクラスを切り替える
+      passIcon.classList.toggle("fa-eye");
+      passIcon.classList.toggle("fa-eye-slash");
+    }
+  </script>
+
+</body>
+</html>

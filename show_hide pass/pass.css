@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+.password input{
+  width: 230px; height: 30px;
+  margin:8px 3px; font-size: 20px;
+  outline: none;
+  border: 1.2px solid #1e272e
+}
