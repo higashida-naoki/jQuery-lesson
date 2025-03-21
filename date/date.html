@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>日付選択</title>
+  <link rel="stylesheet" href="date.css" />
+  <!-- Font Awesome（CDN版） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="datepicker">
+    <span class="currdate">2025/03/21</span>
+
+    <div class="dateselect">
+      <div class="mnth">
+        <div class="mntharrow prev-month fa-regular fa-square-caret-left"></div>
+        <div class="mnthname">March</div>
+        <div class="mntharrow next-month fa-regular fa-square-caret-right"></div>
+      </div>
+
+      <div class="days">
+        <!-- 曜日 -->
+        <div class="dayn">Sun</div>
+        <div class="dayn">Mon</div>
+        <div class="dayn">Tue</div>
+        <div class="dayn">Wed</div>
+        <div class="dayn">Thu</div>
+        <div class="dayn">Fri</div>
+        <div class="dayn">Sat</div>
+        <!-- 日付（JavaScriptが自動追加） -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JS読み込みは一番最後 -->
+  <script src="../jquery.min.js"></script>
+  <script src="date.js"></script>
+</body>
+</html>
