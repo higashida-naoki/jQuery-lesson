@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>プラス</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="google.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="google-expando--wrap">
+    <div class="google-expando">
+      <div class="google-expando__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+          <path d="M38 26H26v12h-4V26H10v-4h12V10h4v12h12v4z"></path>
+        </svg>
+        <span class="visuallyhidden" aria-hidden="true">Expand Card</span>
+      </div>
+
+      <div class="google-expando__card" aria-hidden="true">
+        <img src="//www.google.com/images/srpr/logo11w.png" alt="">
+        Material Design Expando Card
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function googleExpandoToggle() {
+      $(this).toggleClass('active');
+      $(this).next().toggleClass('active');
+      const $expando_card = $(this).next();
+
+      // ARIA属性を切り替え
+      $expando_card.attr('aria-hidden', $expando_card.attr('aria-hidden') === 'true' ? 'false' : 'true');
+    }
+
+    // イベント登録
+    $(document).ready(function() {
+      $('.google-expando__icon').on('click', function() {
+        googleExpandoToggle.call(this);
+      });
+    });
+  </script>
+</body>
+</html>
